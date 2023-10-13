@@ -3,6 +3,7 @@ name: Build Spring Test
 on:
   push:
     paths:
+      - '.github/**'
       - 'apps/spring-test/**'
 
 jobs:
