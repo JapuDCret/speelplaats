@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-test
+spec:
+  selector:
+    matchLabels:
+      app: spring-test
+  template:
+    metadata:
+      labels:
+        app: spring-test
+    spec:
+      containers:
+        - name: spring-test
+          image: ghcr.io/japudcret/speelplaats/spring-test:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
