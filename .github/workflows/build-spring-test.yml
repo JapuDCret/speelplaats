@@ -12,9 +12,6 @@ jobs:
     permissions:
       contents: read
       packages: write
-    defaults:
-      run:
-        working-directory: apps/spring-test/
     steps:
     - name: Checkout project sources
       uses: actions/checkout@v3
@@ -29,6 +26,7 @@ jobs:
       with:
         arguments: publish
         gradle-version: 8.4
+        working-directory: apps/spring-test/
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         username: ${{ github.actor }}
