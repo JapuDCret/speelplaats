@@ -29,7 +29,7 @@ jobs:
       with:
         gradle-version: 8.4
     - name: Execute Gradle build
-      run: ./gradlew publish
+      run: ./gradlew jib
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         username: ${{ github.actor }}
