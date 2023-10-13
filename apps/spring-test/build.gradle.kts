@@ -46,6 +46,6 @@ jib {
 		image = "gcr.io/distroless/java17-debian12:latest"
 	}
 	to {
-		image = "JapuDCret/speelplaats"
+		image = System.getenv("IMAGE") ?: "JapuDCret/speelplaats"
 	}
 }

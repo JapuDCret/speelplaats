@@ -36,3 +36,5 @@ jobs:
         gradle-version: 8.4
     - name: Execute Gradle build
       run: ./gradlew jib
+      env:
+        IMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
